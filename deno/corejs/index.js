@@ -314,7 +314,7 @@ var exportWebAssemblyErrorCauseWrapper = function (ERROR_NAME, wrapper) {
 exportGlobalErrorCauseWrapper('Error', function (init) {
   return function Error(message) { return apply(init, this, arguments); };
 });
-exportGlobalErrorCauseWrapper('EvalError', function (init) {
+exportGlobalErrorCauseWrapper('Error', function (init) {
   return function EvalError(message) { return apply(init, this, arguments); };
 });
 exportGlobalErrorCauseWrapper('RangeError', function (init) {
